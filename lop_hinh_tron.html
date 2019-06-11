@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh tron</title>
+</head>
+<body>
+<script>
+    const PI = 3.14;
+    let HinhTron = function (ban_kinh, mau_sac) {
+        this.ban_kinh = ban_kinh;
+        mau_sac = 'red';
+        this.get_ban_kinh = function () {
+            return ban_kinh;
+        }
+        this.get_dien_tich = function () {
+            return PI * ban_kinh * ban_kinh;
+        }
+    }
+    let hinh_tron = new HinhTron(2);
+    let R = hinh_tron.get_ban_kinh();
+    let S = hinh_tron.get_dien_tich();
+    alert("Bán kính "+R+" diện tích "+S);
+</script>
+</body>
+</html>
