@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh Chu Nhat</title>
+</head>
+<body>
+<center>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">Hello World</canvas>
+</center>
+<script>
+    let Chu_Nhat = function (chieu_dai, chieu_rong) {
+        this.chieu_dai = chieu_dai;
+        this.chieu_rong = chieu_rong;
+
+        this.getChieuDai = function () {
+            return this.chieu_dai;
+        }
+
+        this.getChieuRong = function () {
+            return this.chieu_rong;
+        }
+
+        this.setChieuDai = function (chieu_dai) {
+            this.chieu_dai = chieu_dai;
+        }
+
+        this.setChieuRong = function (chieu_rong) {
+            this.chieu_rong = chieu_rong;
+        }
+
+        this.Dien_Tich = function () {
+            return this.chieu_rong * this.chieu_dai;
+        }
+
+        this.Chu_Vi = function () {
+            return 2 * (this.chieu_dai + this.chieu_rong);
+        }
+
+        this.Ve_Canvas = function () {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(300, 300, 175, 75);
+        }
+    }
+    let ChuNhat = new Chu_Nhat(10, 8);
+    ChuNhat.Ve_Canvas();
+    let a = ChuNhat.getChieuDai();
+    let b = ChuNhat.getChieuRong();
+    alert(a + " , " + b);
+    ChuNhat.setChieuDai(6);
+    ChuNhat.setChieuRong(4);
+    c = ChuNhat.Dien_Tich();
+    d = ChuNhat.Chu_Vi();
+    alert("Dien tich " + c + " ,Chu vi " + d);
+
+</script>
+</body>
+</html>
