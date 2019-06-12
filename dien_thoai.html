@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dien thoai</title>
+</head>
+<body>
+<script>
+    let Mobile = function (pin) {
+        this.pin = pin;
+        this.tinNhanDangSoan = [];
+        this.tinNhanGuiDi = [];
+        this.tinNhanDaGui = [];
+        this.isOn = true;
+        this.checkOn = function () {
+            return this.isOn;
+        }
+        this.batMobile = function () {
+            this.isOn = true;
+        }
+        this.tatMobile = function () {
+            this.isOn = false;
+        }
+        this.sacPin = function () {
+            if (this.pin >= 100) {
+                return "Pin đầy";
+            } else {
+
+            }
+
+        }
+    }
+</script>
+</body>
+</html>
