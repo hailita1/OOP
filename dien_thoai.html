@@ -60,7 +60,7 @@
         this.xemTinNhanDaGui = function () {
             if (this.checkOn()) {
                 for (let i = 0; i < this.tinNhanGuiDi.length; i++) {
-                    document.write(this.tinNhanGuiDi[i] + ",");
+                    document.write(this.tinNhanGuiDi[i] + " ");
                 }
                 this.pin--;
             } else {
@@ -70,7 +70,7 @@
         this.xemTinNhanNhanDuoc = function () {
             if (this.checkOn()) {
                 for (let i = 0; i < this.tinNhanNhanDuoc.length; i++) {
-                    document.write(this.tinNhanNhanDuoc[i] + ",");
+                    document.write(this.tinNhanNhanDuoc[i] + " ");
                 }
                 this.pin--;
             } else {
@@ -81,8 +81,6 @@
 </script>
 <script>
     let iphone = new mobile(50);
-    iphone.soanTinNhan("Máy đã được bật");
-    iphone.soanTinNhan("Máy đã được bật");
     iphone.soanTinNhan("Máy đã được bật");
     iphone.soanTinNhan("Máy đã được bật");
     iphone.soanTinNhan("Máy đã được bật");
