@@ -6,61 +6,71 @@
 </head>
 <body>
 <script>
-    let Apple = function (weight) {
-        this.weihgt = weight;
-
-        function getWeight() {
-            return this.weight;
-        }
-
-        function decrease() {
-            if (this.weight > 0)
-                return this.weight--;
-        }
-
-        function isEmpty() {
-
-            if (this.weight == 0) {
-                return true;
-            } else {
-                return false;
+    function Apple(weight) {
+        this.weight = 10;
+        this.decrease = function () {
+            if (this.weight > 0) {
+                this.weight--;
             }
-        }
+        };
+        this.isEmpty = function () {
+            if (this.weight === 0) {
+                return true;
+            }
+            return false;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
     }
-    let Human = function (name, gender, weight) {
+
+    function Human(name, gender, weight) {
         this.name = name;
         this.gender = gender;
-        this.weight = weight
-        this.isMale = function (gender) {
-            if (this.gender == 'male') {
+        this.weight = weight;
+        this.isMale = function () {
+            if (gender === true) {
                 return true;
-            } else {
-                return false;
             }
-        }
-        this.say = function (message) {
-            console.log(message);
-        }
-        this.setGender = function () {
-            return this.gender;
-        }
+            return false;
+        };
+        this.setGender = function (gender) {
+            this.gender = gender;
+        };
+        this.checkApple = function () {
+            if (this.weight === 0) {
+                return true;
+            }
+            return false;
+        };
         this.eat = function (apple) {
             apple.decrease();
             this.weight++;
-        }
-        this.getName = function () {
+        };
+        this.say = function (message) {
+            alert(message);
+        };
+        this.getName = function (name) {
             return this.name = name;
-        }
-        this.setName = function (name) {
-            this.name = name;
-        }
+        };
         this.getWeight = function () {
             return this.weight;
-        }
+        };
         this.setWeight = function (weight) {
-            this.weight = weight
-        }
-    }
+            this.weight = weight;
+        };
+    };
+    let apple = new Apple();
+    let Adam = new Human("Adam", 'male', 70);
+    let Eva = new Human("Eva", 'female', 45);
+
+    Adam.say("I love you");
+    Eva.say("me too");
+    Adam.eat(apple);
+    Eva.eat(apple);
+
+    alert(Adam.getWeight());
+    alert(Eva.getWeight());
 </script>
 </body>
 </html>
