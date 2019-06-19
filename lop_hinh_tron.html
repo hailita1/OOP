@@ -6,7 +6,6 @@
 </head>
 <body>
 <script>
-    const PI = 3.14;
     let HinhTron = function (ban_kinh, mau_sac) {
         this.ban_kinh = ban_kinh;
         mau_sac = 'red';
@@ -14,13 +13,11 @@
             return ban_kinh;
         }
         this.get_dien_tich = function () {
-            return PI * ban_kinh * ban_kinh;
+            return Math.PI * this.ban_kinh * this.ban_kinh;
         }
     }
-    let hinh_tron = new HinhTron(2);
-    let R = hinh_tron.get_ban_kinh();
-    let S = hinh_tron.get_dien_tich();
-    alert("Bán kính "+R+" diện tích "+S);
+    let hinh_tron = new HinhTron(5);
+    alert("Bán kính "+hinh_tron.get_ban_kinh()+" diện tích "+hinh_tron.get_dien_tich());
 </script>
 </body>
 </html>

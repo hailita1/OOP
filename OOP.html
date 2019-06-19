@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test anh Hoa</title>
+</head>
+<body>
+<script>
+    let KhachHang = function (name) {
+        this.name = name;
+        this.goTo = function (location) {
+            console.log(this.name + " đã đến địa điểm "+ location.name +" tại địa điểm "+location.address);
+        }
+    }
+    let DiaDiem = function(name, address){
+        this.name = name;
+        this.address = address;
+
+    }
+    //Su dung
+    let diadiem1 = new DiaDiem("Tocotoco", "1194 Đường Láng");
+    let person1 = new  KhachHang("Hải");
+    person1.goTo(diadiem1);
+    let person2 = new KhachHang("Hạnh");
+    person2.goTo(diadiem1);
+</script>
+</body>
+</html>
