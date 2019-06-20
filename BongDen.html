@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bong Den</title>
+</head>
+<body>
+<script>
+    let SwitchButton = function () {
+        this.connectToLamp = function (electricLap) {
+            this.connectToLamp = electricLap;
+        };
+        this.turnOn = function () {
+            this.status = true;
+        };
+        this.turnOff = function () {
+            this.status = false;
+        };
+        this.message = function () {
+            if (this.status) {
+                alert("Đèn bật");
+            } else {
+                alert("Đèn tắt");
+            }
+        }
+    };
+    let ElectricLamp = function () {
+        this.turnOff = function () {
+            this.status = false;
+        };
+        this.turnOn = function () {
+            this.status = true;
+        }
+    };
+    let elictricLamp = new ElectricLamp();
+    let switchButton = new SwitchButton();
+    switchButton.connectToLamp(elictricLamp);
+    switchButton.turnOn();
+    switchButton.message();
+    switchButton.turnOff();
+    switchButton.message();
+    switchButton.turnOn();
+    switchButton.message();
+    switchButton.turnOff();
+    switchButton.message();
+    switchButton.turnOn();
+    switchButton.message();
+    switchButton.turnOff();
+    switchButton.message();
+    switchButton.turnOn();
+    switchButton.message();
+    switchButton.turnOff();
+    switchButton.message();
+    switchButton.turnOn();
+    switchButton.message();
+    switchButton.turnOff();
+    switchButton.message();
+</script>
+</body>
+</html>
