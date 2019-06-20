@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mèo Chuột</title>
+</head>
+<body>
+<script>
+    let Rat = function (name, weight, speed) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.voice = function () {
+            alert("chít, chít");
+        };
+        this.isLiving = function () {
+            return true;
+        };
+        this.isDead = function () {
+            return false;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.message = function (cat) {
+            if (cat.speed > this.speed) {
+                alert(this.name + " đã chết");
+            } else {
+                alert(this.name + " còn sống");
+            }
+        }
+    };
+    let Cat = function (name, weight, speed) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.voice = function () {
+            alert("meo, meo");
+        };
+        this.catchMouse = function (rat) {
+            if (this.speed > rat.speed) {
+                alert("Bắt được một con chuột");
+            } else {
+                alert("Tốc độ của con chuột nhanh hơn con mèo");
+            }
+        };
+        this.eatMouse = function (rat) {
+            if (this.speed > rat.speed) {
+                if (rat.isLiving()) {
+                    this.weight += rat.getWeight();
+                    rat.isDead();
+                }
+            }
+        }
+    };
+    let Jerry = new Rat("Jerry", 5, 100);
+    let Tom = new Cat("Tom", 20, 90);
+    Jerry.voice();
+    Tom.voice();
+    Tom.catchMouse(Jerry);
+    Tom.eatMouse(Jerry);
+    alert("Cân nặng của " + Tom.name + " là: " + Tom.weight);
+    Jerry.message(Tom);
+</script>
+</body>
+</html>
