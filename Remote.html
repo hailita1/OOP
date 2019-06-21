@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remote</title>
+</head>
+<body>
+<script>
+    let TV = function (channel, volumn) {
+        this.channel = channel;
+        this.volumn = volumn;
+        this.status = false;
+        this.changeChannel = function () {
+            alert(this.channel);
+        };
+        this.changeVolumn = function () {
+            alert(this.volumn);
+        };
+        this.turnOn = function () {
+            this.status = true;
+        };
+        this.turnOff = function () {
+            this.status = false;
+        };
+    };
+    let Remote = function (code) {
+        this.code = code;
+        this.changeChannel = function (tv, channel) {
+            tv.channel = channel;
+        };
+        this.addVolumn = function (tv, volumn) {
+            tv.volumn += volumn;
+        };
+        this.subVolumn = function (tv, volumn) {
+            tv.volumn -= volumn;
+        }
+    };
+    let tv = new TV(7, 10);
+    let remote = new Remote("tv");
+    remote.changeChannel(tv, 3);
+    tv.changeChannel();
+    remote.addVolumn(tv, 2);
+    tv.changeVolumn();
+</script>
+</body>
+</html>
