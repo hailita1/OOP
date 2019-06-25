@@ -15,27 +15,27 @@
 
         this.getChieuDai = function () {
             return this.chieu_dai;
-        }
+        };
 
         this.getChieuRong = function () {
             return this.chieu_rong;
-        }
+        };
 
         this.setChieuDai = function (chieu_dai) {
             this.chieu_dai = chieu_dai;
-        }
+        };
 
         this.setChieuRong = function (chieu_rong) {
             this.chieu_rong = chieu_rong;
-        }
+        };
 
         this.Dien_Tich = function () {
             return this.chieu_rong * this.chieu_dai;
-        }
+        };
 
         this.Chu_Vi = function () {
             return 2 * (this.chieu_dai + this.chieu_rong);
-        }
+        };
 
         this.Ve_Canvas = function () {
             let ctx = document.getElementById("myCanvas").getContext("2d");
@@ -44,7 +44,7 @@
             ctx.fillText("hello", 10,50);
             ctx.fillRect(300, 300, 175, 75);
         }
-    }
+    };
     let ChuNhat = new Chu_Nhat(10, 8);
     ChuNhat.Ve_Canvas();
     let a = ChuNhat.getChieuDai();

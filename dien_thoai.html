@@ -15,13 +15,13 @@
         this.isOn = true;
         this.checkOn = function () {
             return this.isOn;
-        }
+        };
         this.batDienThoai = function () {
             this.isOn = true;
-        }
+        };
         this.tatDienThoai = function () {
             this.isOn = false;
-        }
+        };
         this.sacPin = function () {
             if (pin >= 100) {
                 return "Pin đầy";
@@ -29,7 +29,7 @@
                 this.pin += phanTramCanSac;
                 return "Đã sạc";
             }
-        }
+        };
         this.soanTinNhan = function (tinNhan) {
             if (this.checkOn()) {
                 this.tinNhanDangViet.push(tinNhan);
@@ -37,7 +37,7 @@
             } else {
                 alert("Bạn cần bật máy")
             }
-        }
+        };
         this.nhanTinNhan = function (tinNhan) {
             if (this.checkOn()) {
                 alert("Nhận được 1 tin nhắn");
@@ -46,7 +46,7 @@
             } else {
                 alert("Phải bật máy để nhận được tin nhắn")
             }
-        }
+        };
         this.guiTinNhanDi = function (viTriTinNhan) {
             if (this.checkOn()) {
                 alert("Đã gửi 1 tin nhắn");
@@ -56,7 +56,7 @@
             } else {
                 alert("Máy chưa bật");
             }
-        }
+        };
         this.xemTinNhanDaGui = function () {
             if (this.checkOn()) {
                 for (let i = 0; i < this.tinNhanGuiDi.length; i++) {
@@ -66,7 +66,7 @@
             } else {
                 alert("Bạn cần bật máy!");
             }
-        }
+        };
         this.xemTinNhanNhanDuoc = function () {
             if (this.checkOn()) {
                 for (let i = 0; i < this.tinNhanNhanDuoc.length; i++) {
